@@ -5,8 +5,9 @@ const recordSchema = new mongoose.Schema({
   vehicleType: String,
   parkingLot: { 
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'ParkingLotModel'
- },
+    ref: 'ParkingLot' 
+  },
+  parkingArea:String,
   entryTime: Date,
   exitTime: Date,
   amountPaid: Number
@@ -14,4 +15,4 @@ const recordSchema = new mongoose.Schema({
 
 const RecordModel = mongoose.model('ParkingHistory', recordSchema);
 
-module.exports = {RecordModel}
+module.exports = { RecordModel };

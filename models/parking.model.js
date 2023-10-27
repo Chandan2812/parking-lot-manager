@@ -11,9 +11,14 @@ const parkingLotSchema = new mongoose.Schema({
     twoWheelers: Number,
     hatchbackCars: Number,
     suvCars: Number,
+  },
+  rates: {
+    twoWheelers: Number,   
+    hatchbackCars: Number, 
+    suvCars: Number           
   }
 });
 
 const ParkingLotModel = mongoose.model('ParkingLot', parkingLotSchema);
 
-module.exports = {ParkingLotModel}
+module.exports = { ParkingLotModel };
